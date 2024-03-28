@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+}
+
+body{
+    /* background-color:#242424 !important; */
+    background-image: url("./AbhiDesign.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.link-box a{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #242424;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 5px 5px black;
+}
+
+.navbar a:hover{
+    color: white;
+}
+
+.link-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: baseline;
+}
+
+@font-face{
+    font-family: 'After smile';
+    src: url("./AfterSmileRegular-K7M3y.otf");
+    font-weight: bold;
+}
+
+.navbar h1{
+    font-family: "Righteous", sans-serif !important;
+}
+
+.post-container h1{
+    background-color: #706BC6;
+    font-family: 'After smile' !important;
+    font-weight: 400;
+    font-style: normal;
+    color: black !important;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 900 !important;
+}
+
+.navbar{
+    background-color: #37337B !important;
+
+}
+
+.card-link{
+    background-color: #706BC6 !important;
+    color: #242424 !important;
+}
+
+.card-link:hover{
+    background-color: #282e3c !important;
+    color: #E1E0EF !important;
+}
+
+.card-body{
+    background-color: #A6A4D6;
+    color: black !important;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.616), inset 0px 0px 40px 5px #37337B;
+    transition: all 0.5s;
+}
+
+.card-body:hover{
+    background-color: #4943c9;
+}
+
+.card{
+    border: none !important;
+    background-color: #242424 !important;
+    border-radius: 15px !important;
+}
+
+.blog-container{
+    border: 3px solid #988829;
+    border-radius: 10px;
+    overflow-y: scroll;
+    background-color: #242424;
+    height: 100%;
+}
+
+.blog-container::-webkit-scrollbar{
+    display: none;
+}
+
+.articleTitle{
+    background-color: #988829;
+    height: fit-content;
+    padding: 5px;
+}
+
+input[type=submit]{
+    margin-top: 20px;
+    background-color: #282e3c;
+    border: none;
+    border-radius: 10px;
+    color: red;
+    width: fit-content;
+}
+
+input[type=submit]:hover{
+    background-color: red;
+    color: white;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h5{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto !important;
+    font-weight: 800 !important;
+    font-style: normal !important;
+}
+
+h6{
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 663 !important;
+    font-style: normal;
+}
+
+p{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.option-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-items: baseline;
+    column-gap: 40px;
+}
+
+.edit{
+    border-radius: 10px;
+    font-family: 'Poppins';
+    border: none;
+    padding: 5px;
+    flex: 2;
+    font-weight: 600 !important;
+    background-color: #37337B;
+    box-shadow: 5px 5px #242424;
+}
+
+.edit:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+#batmanAvatar{
+    background-image: url('./batmanAvatar.svg');
+    background-size: cover;
+    width: 7vmin;
+    height: 7vmin;
+    transition: all ease-in-out .25s;
+}
+
+#batmanAvatar:hover{
+    background-image: url('./batmanAfterHover.svg');
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+main{
+    flex: 1;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #37337B;
+    width: 100%;
+}
+
+
+footer p{
+    padding: 5px;
+    color: black;
+}

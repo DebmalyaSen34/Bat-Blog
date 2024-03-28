@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-image: url("./yourblog.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face{
+    font-family: 'After smile';
+    src: url("./AfterSmileRegular-K7M3y.otf");
+    font-weight: bold;
+}
+
+.navbar h1{
+    font-family: "Righteous", sans-serif !important;
+}
+
+.post-container h1{
+    background-color: #706BC6;
+    font-weight: 400;
+    font-style: normal;
+    color: black !important;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'After smile';
+}
+
+.navbar{
+    background-color: #37337B !important;
+
+}
+
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-matter{
+    width: 90%;
+    margin: 20px 10%;
+    color: black;
+    background-color: #A6A4D6;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.616), inset 0px 0px 40px 5px #37337B;
+}
+
+.blog-matter p{
+    padding: 10px;
+    font-size: large;;
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, p{
+    font-family: 'Poppins';
+    font-weight: 700 !important;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */
+    color: #242424 !important;
+}
+
+small {font-size: 0.750rem; /* 12px */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+    flex: 1;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #37337B;
+    width: 100%;
+}
+
+
+footer p{
+    padding: 5px;
+    color: black;
+}
