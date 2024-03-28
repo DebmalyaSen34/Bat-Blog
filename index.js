@@ -23,6 +23,18 @@ async function NewBlog (title, sub_title, sub_content, content){
     await itemsPool.query('INSERT INTO blogposts (title, sub_title, sub_content, content) VALUES ($1, $2, $3, $4)', [title, sub_title, sub_content, content]);
 }
 
+async function deleteBlog (id){
+    await itemsPool.query('DELETE FROM blogposts WHERE id = $1', [id]);
+}
+
+async function register(fullname, username, password){
+    await itemsPool.query('INSERT INTO registerUsers (full_name, user_name, password) values ($1, $2, $3)', [fullname, username, password]);
+}
+
+function checkForApostrophe (content){
+    return content.replace(/'/g, "\''");
+}
+
 
 app.get('/', async (req, res) => {
     const posts = await getBlogPosts();
@@ -31,7 +43,6 @@ app.get('/', async (req, res) => {
 
 app.get("/yourBlog/:id", async (req, res) => {
     const id = req.params.id;
-    console.log(id);
     const specificPost = (await getBlogPostsById(id)).rows;
     res.render('yourBlog.ejs', {articleData: specificPost[0]});
 });
@@ -49,6 +60,26 @@ app.post("/submit", (req, res) => {
     NewBlog(blogTitle, blogSubTitle, blogSummary, blogContent);
     res.redirect('/');
 
+});
+
+app.post("/del/:id", (req,res) => {
+    const id = req.params.id;
+    deleteBlog(id);
+    res.redirect('/');
+});
+
+app.get('/profile', (req, res) => {
+    res.render('profile.ejs');
+});
+
+app.post('/registerSelf', async (req, res) => {
+    console.log(req.body);
+    const fullName = req.body.fullName;
+    const username = req.body.username;
+    const password = req.body.password;
+
+    register(fullName, username, password);
+    res.redirect('/');
 });
 
 app.listen(5070, () => {
