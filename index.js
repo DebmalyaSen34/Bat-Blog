@@ -47,7 +47,7 @@ app.post("/submit", (req, res) => {
     let blogContent = req.body["content-area"];
 
     NewBlog(blogTitle, blogSubTitle, blogSummary, blogContent);
-    res.render('/');
+    res.redirect('/');
 
 });
 
