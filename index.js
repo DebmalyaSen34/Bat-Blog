@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 async function getBlogPosts (){
-    return result = await itemsPool.query('SELECT * FROM blogposts');
+    return result = await itemsPool.query('SELECT * FROM blogposts ORDER BY id DESC');
 }
 
 async function getBlogPostsById (id) {
