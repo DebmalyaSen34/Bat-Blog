@@ -22,23 +22,3 @@ Array.from(noButton).forEach(element => {
         changeStyleNone(element);
     });
 });
-
-// function verifyAndDelete() {
-//     const password = document.getElementById('passwordInput').value;
-
-//     // Send the password to your Node.js server for verification
-//     fetch('/verify-delete', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({ password: password }) 
-//     })
-//     .then(response => response.json())
-//     .then(data => {
-//         if (data.success) {
-//             callDeleteFunction(); // Assuming you have this function on the frontend
-//             passwordPrompt.style.display = 'none';
-//         } else {
-//             alert('Incorrect password'); 
-//         }
-//     });
-// }

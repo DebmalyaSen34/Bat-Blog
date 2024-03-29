@@ -5,11 +5,11 @@
 body{
     /* background-color:#242424 !important; */
     background-image: url("./AbhiDesign.svg");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
 }
 
 /* @media all and (max-width: 500px){

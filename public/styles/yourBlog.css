@@ -4,12 +4,10 @@
 
 body{
     background-image: url("./yourblog.svg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    height: auto;
-    border: 1px solid red;
 }
 
 @font-face{
