@@ -49,9 +49,15 @@
             <p class="card-text"> <%= article.sub_content %> </p>
             <div class="option-box">
               <a href="yourBlog/<%= article.id %>" class="card-link">Full blog</a>
-              <form action="/del/<%= article.id %>" method="post">
-              <input type="submit" value="Delete" id="delete">
-              </form>
+              <button class="deleted">Delete</button>
+              <div class="passwordPrompt" style="display: none;">
+                <h4>Confirm Delete?</h4>
+                <form action="/delete/<%= article.id %>" method="post">
+                  <input type="password" placeholder="Enter blog password" name="password" class="passwordInput" required>
+                  <button type="submit">Submit</button>
+                </form>
+                <div class="noButton">I am not sure</div>
+              </div>
               <button class="edit" onclick="location.href = '/editBlog/<%= article.id %>'"   >Edit</button>
               </div>
           </div>
