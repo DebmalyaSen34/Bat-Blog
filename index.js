@@ -37,7 +37,7 @@ async function passwordCheck(password, id){
     if(password === passwordDB){
         return true;
     }else{
-        false;
+       return false;
     }
 }
 
