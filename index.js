@@ -32,12 +32,12 @@ async function register(fullname, username, password){
     await itemsPool.query('INSERT INTO registerUsers (full_name, user_name, password) values ($1, $2, $3)', [fullname, username, password]);
 }
 
-async function passwordCheck(password, id){
-    const passwordDB = await itemsPool.query("SELECT blogpassword FROM blogPosts WHERE id = $1", [id]);
-    if(password === passwordDB){
-        return true;
-    }else{
-        false;
+async function passwordCheck(id){
+    const result = await itemsPool.query("SELECT blogpassword FROM blogPosts WHERE id = $1", [id]); 
+    if (result.rows.length > 0) {
+        return result.rows[0].blogpassword;
+    } else {
+        return null;
     }
 }
 
@@ -73,11 +73,13 @@ app.post("/submit", (req, res) => {
 
 });
 
-app.post("/delete/:id", (req,res) => {
+app.post("/delete/:id", async (req,res) => {
     const id = parseInt(req.params.id);
     const password = req.body.password;
 
-    if(passwordCheck(password, id)){
+    const storedPassword = await passwordCheck(id);
+
+    if(storedPassword===password){
         deleteBlog(id);
         res.redirect('/');
     }else{
